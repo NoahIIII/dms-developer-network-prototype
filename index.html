@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DMS Developer Network — UI options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Inter", "Segoe UI", system-ui, sans-serif; background: #090e1a; color: #e9eef8; line-height: 1.55; }
+    main { max-width: 1120px; margin: 0 auto; padding: 56px 24px 72px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; margin-bottom: 36px; } .logo svg { width: 30px; height: 30px; }
+    h1 { margin: 0 0 10px; font-size: 2rem; font-weight: 600; letter-spacing: -.02em; }
+    h2 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+    p { margin: 0; color: #9aa8c2; max-width: 68ch; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; margin-top: 36px; }
+    a.opt { display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 12px; background: #0e1626; border: 1px solid #1c2740; color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+    a.opt:hover { border-color: #4c8dff; transform: translateY(-3px); }
+    .tag { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: #9aa8c2; }
+    ul { margin: 0; padding-left: 18px; color: #9aa8c2; font-size: .9rem; }
+    .thumb { height: 160px; border-radius: 8px; padding: 10px; display: grid; gap: 6px; overflow: hidden; border: 1px solid #1c2740; }
+    .thumb i { display: block; border-radius: 3px; }
+    .t1 { background: #090e1a; grid-template-columns: 1.1fr 1fr; grid-template-rows: 8px 1fr 22px; } .t1 i { background: #152038; } .t1 i:first-child, .t1 i:last-child { grid-column: 1 / -1; } .t1 i:nth-child(2) { background: linear-gradient(#4c8dff, #4c8dff) left 30% / 70% 10px no-repeat, #0e1626; } .t1 i:last-child { background: linear-gradient(90deg, #4c8dff 25%, #3ecf8e 25% 50%, #f2d21e 50% 75%, #ff5d62 75%) top / 100% 2px no-repeat, #152038; }
+    .t2 { background: #09090a; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 3px 1.3fr 1fr; } .t2 i { background: #1b1b1f; border-radius: 6px; } .t2 i:first-child { grid-column: 1 / -1; border-radius: 0; background: linear-gradient(90deg, #e3262b, #f2c81e 36%, #12a150 66%, #2478e0); } .t2 i:nth-child(2) { grid-column: span 2; background: linear-gradient(90deg, #e3262b, #f2c81e, #12a150, #2478e0) 10px 60% / 34% 8px no-repeat, linear-gradient(#f5f5f6, #f5f5f6) 10px 35% / 60% 8px no-repeat, #111113; }
+    .t3 { background: #f7f8fb; grid-template-columns: repeat(4, 1fr); grid-template-rows: 12px 1fr 44px; } .t3 i { border-radius: 8px; } .t3 i:first-child { grid-column: 1 / -1; background: #fff; border: 1px solid #e5e8ef; border-radius: 99px; margin: 0 14%; } .t3 i:nth-child(2) { grid-column: 1 / -1; background: linear-gradient(#10182b, #10182b) center 35% / 50% 10px no-repeat, linear-gradient(#fff, #fff) center 75% / 60% 14px no-repeat; }
+    .t3 i:nth-child(3) { background: #dbe7f3; } .t3 i:nth-child(4) { background: #dcefe3; } .t3 i:nth-child(5) { background: #f6ecd0; } .t3 i:nth-child(6) { background: #f9dedf; }
+    .note { margin-top: 32px; font-size: .88rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><g transform="rotate(45 16 16)"><rect x="5" y="5" width="10.4" height="10.4" fill="#e3262b"/><rect x="16.6" y="5" width="10.4" height="10.4" fill="#0e7a3f"/><rect x="5" y="16.6" width="10.4" height="10.4" fill="#f2e41e"/><rect x="16.6" y="16.6" width="10.4" height="10.4" fill="#0c4a70"/></g></svg>
+      DMS Developer Network
+    </div>
+    <h1>Three UI options</h1>
+    <p>Same ten screens, same mock data, same Arabic/English switch. Each option has its own layout, typeface and palette, and each has a dark and a light theme.</p>
+
+    <div class="grid">
+      <a class="opt" href="option-1/index.html">
+        <div class="thumb t1"><i></i><i></i><i></i><i></i></div>
+        <span class="tag">Option 1 · dark by default</span>
+        <h2>Pillar Bar</h2>
+        <p>Top navigation with four colour-coded pillars and a sub-menu. Hairlines, blue accent, Inter.</p>
+        <ul><li>Reads as a developer product site</li><li>Strong public landing page</li><li>Sub-menu adds a second row on inner pages</li></ul>
+      </a>
+      <a class="opt" href="option-2/index.html">
+        <div class="thumb t2"><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="tag">Option 2 · dark by default</span>
+        <h2>Spectrum</h2>
+        <p>Black and white with the four logo colours as one gradient signature. Dropdown menus, bento home, Geist.</p>
+        <ul><li>Most premium, brand-forward look</li><li>Menus show every screen with a description</li><li>Colour is used sparingly, so pillars are less coded</li></ul>
+      </a>
+      <a class="opt" href="option-3/index.html">
+        <div class="thumb t3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <span class="tag">Option 3 · light by default</span>
+        <h2>Open Studio</h2>
+        <p>Floating pill navigation, centred search-first home, soft tinted pillar tiles, green accent, Manrope.</p>
+        <ul><li>Friendliest for non-developers and partners</li><li>Each section gets its own colour wash</li><li>Roomier, so less fits on one screen</li></ul>
+      </a>
+    </div>
+
+    <p class="note">All data is placeholder. Nothing is saved or sent anywhere. Feature list and open questions: <code>PROJECT_ANALYSIS.md</code> in the parent folder.</p>
+  </main>
+</body>
+</html>
